@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Poppins", sans-serif;
+
+  --color-primary: #5F8A8A;
+  --color-primary-dark: #3D5A5A;
+  --color-primary-light: #D1E2E2;
+  --color-sage: #A8BCBC; /* Slightly deeper sage for better white contrast */
+  --color-sage-dark: #8FA3A3;
+  --color-sage-light: #C5D7D7;
+  --color-accent: #F0F4F4;
+  
+  --radius-xl: 2rem;
+  --radius-2xl: 3.5rem;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-slate-900 bg-[#A8BCBC] antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold tracking-tight text-[#2C3E3E]; /* Darker teal for contrast */
+  }
+}
+
+.glass-card {
+  @apply bg-white/25 backdrop-blur-xl border border-white/40 shadow-[0_8px_32px_0_rgba(44,62,62,0.08)];
+}
+
+.glass-nav {
+  @apply bg-[#A8BCBC]/80 backdrop-blur-xl border-b border-white/30;
+}
+
+.section-padding {
+  @apply py-16 px-6 md:py-32 md:px-12 lg:px-24;
+}
+
+.btn-primary {
+  @apply bg-[#5F8A8A] text-white px-8 py-4 md:px-10 md:py-5 rounded-full font-bold transition-all hover:bg-[#3D5A5A] hover:scale-105 active:scale-95 shadow-xl shadow-[#5F8A8A]/30 text-sm md:text-base;
+}
+
+.btn-secondary {
+  @apply bg-white/15 backdrop-blur-md text-[#2C3E3E] border border-white/40 px-8 py-4 md:px-10 md:py-5 rounded-full font-bold transition-all hover:bg-white/25 hover:scale-105 active:scale-95 text-sm md:text-base;
+}
